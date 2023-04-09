@@ -1,0 +1,347 @@
+PS C:\Users\Aalya Singh> ssh bandit.labs.overthewire.org -l bandit9 -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+bandit9@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * peda (https://github.com/longld/peda.git) in /opt/peda/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+ Both python2 and python3 are installed.
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+
+bandit9@bandit:~$ find . -name data.txt
+./data.txt
+bandit9@bandit:~$ strings data.txt
+q99B
+C:I5H
+IkC_
+r2Fx
+#6j2
+pjCkC
+--\'
+yjD<'`#
+dS=5
+fHK"
+Bv[B9;
+GFVY
+k+'B[8KX
+-I      '
+LfLx"*
+,n:,i
+Kz}G
+qC`c(
+fs4l
+f========== theM
+s,<)
+GgYA
+%b><4
+JDm.
+"Hmz
+Sj`%Y|
+sYA
+^77'
+(]7_
+'QO4
+$as`R
+i)Te<
+mTZc
+k/G$
+XMR\
+c0mR
+z4[X
+-K)C
+mvhx
+WYL`
+m0C3
+*#%J
+^?v)
+k.2~
+M-"c
+=XeOh
+/D8e
+-<'15
+X1Q\
+=vb`
+|cW;ce
+a"/q
+<L$Y;8
+f?tK
+OP?fv
+EE5?U|
+_x8@
+@d;X'
+5#>^
+4%Qz1
+99lR
+O=Nq
+g-pT,
+=I6a
+r28w
+\DgR
+:"P^
+A|9wE
+========== password
+)j;S2{
+x[4F
+v:      BF6T"
+M~CVx_'
+)Id%sYb
+6l&#
+xANM
+dWE8
+/$i(
+vus~
+R@-t
+B.ek
+d:Vy
+\P]N
+C'_]
+"HL1
+?ym/
+)5Ic
+<ISi
+eAwHu
+9Gy-
+:L>+
+<07/
+>0{MKqzdk
+========== is
+"6V-(
+l(8A
+_<s&
+t<%P?hN
+Qc%d#
+>VtL
+-CC     bp@
+/NIC
+D%x
+:cjJQ
+2\:=
+3LeJ
+u=]T
+caehl
+jKKH7
+5~RTr
+0$"f
+do:V!Z1
+sC"V
+a!8n
+vX$A
+g1066NJ{`
+0q      D
+or&>
+z,q-)
+[a0P.&
+)Ewh
+%Af.Xr
+%AM_9=
+2[i|z
+['V6
+I >j
+*)RP
+K[l$
+ s*3
+.jWd+2
+e?wr
+H$"e
+VV<Fx
+XY2Ck
+1~=y
+$OE~M
+p>*!:
+Q=9(
+`&cl
+M1x#;-X
+uiki
+v>hJ
+I<Nt
+5s8m
+;U7M
+#aE,
+2?#$
+HmX>
+1Ks<
+Y)~_yNQ
+LTEfe
+l2IB
+dk:xY
+L:sVs
+)quKc2
+Fhlo
+8x7sDm
+"sunZf
+"D"nb
+Sh-6
+G|CO4{
+N{OV
+MMq.f
+90;C
++z_B
+DO`IE
+wWiXz
+V4<:
+j=GD
+;`ahG^$
+NX)RSMO
+        MPr
+M       D.
+MBI
+@TS4
+D5ZyT
+T       6$
+ KbL
+C6zE
+^3YF
+d&:VCx
+iA4;
+c!_)
+i%sS
+~\pdM
+PpqJ6M6z7
+d.TVk
+b=fF
+>8DUE
+TIm4e
+u$gD
+s`/1
+uJ(DB
+Zmjz?~j
+[K;+
+0?F=(
+?.Ws1op>
+j&LA
+KZs}v
+t}97
+LRq`
+?l}^
+t|;g
+@89
+oP1p
+K,1O
+#e6I
+.DX_/=
+?+'g
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+8w51
+_~tV
+&][/
+>US]b
+W@S[S
+F\yb
+GGvf
+zh;gG
+#<{p
+ST{J3
+8eb/J
+9h|P]
+toS\L
+9G_
+o4^cp
+t|K%
+eXhh
+B#tO
+&OEaT
+sI-Q
++]!dl
+3iI(7
+j_:XhS>
+$^c&
+i#F9
+@;3A
+"0(f
+5W06D
+2woe}
+d{RF
+xA/] !?h
+}\uvn
+xodT`
+4sJ,|E?
+TLhY
+3!*U
